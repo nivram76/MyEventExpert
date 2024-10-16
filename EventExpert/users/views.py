@@ -36,3 +36,4 @@ def get_user_profile(request):
     user = request.user
     serializer = UserSerializer(user)
     return Response(serializer.data)
+    

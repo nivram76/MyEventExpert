@@ -1,0 +1,20 @@
+/* src/components/Events.css */
+
+/* Container for the events page */
+.events-container {
+    margin-top: 30px;
+    max-width: 1200px;
+  }
+  
+  /* Event cards spacing and layout */
+  .event-card {
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .event-card .btn {
+    align-self: flex-start;
+  }
+  

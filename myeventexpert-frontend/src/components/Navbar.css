@@ -1,0 +1,29 @@
+/* src/components/Navbar.css */
+
+/* Center the navbar elements vertically */
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link,
+.custom-navbar .dropdown-toggle {
+  font-weight: 700;
+  color: #fff !important;
+  font-size: 18px;
+  display: flex;
+  align-items: center;  /* Ensures vertical alignment */
+}
+
+/* Space out navbar elements evenly */
+.nav-items {
+  flex-grow: 1;  /* Makes the Nav fill available space */
+  justify-content: space-between;  /* Distributes items evenly */
+  display: flex;
+}
+
+/* Ensure even spacing between the elements */
+.nav-items .nav-link,
+.nav-items .nav-item {
+  margin-right: 20px;
+}
+
+.custom-navbar .navbar-collapse {
+  justify-content: space-between;
+}

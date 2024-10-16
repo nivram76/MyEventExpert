@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-const Login = () => {
+const Login = ({ onLogin }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -12,10 +14,15 @@ const Login = () => {
         username,
         password,
       });
-      // Store tokens in local storage for future requests
+      // Store tokens in local storage
       localStorage.setItem('access_token', response.data.access);
       localStorage.setItem('refresh_token', response.data.refresh);
-      alert('Login successful!');
+
+      // Notify the parent component (App.js) that the user has logged in
+      onLogin();  // Trigger rerender of Navbar
+
+      // Redirect to home page
+      navigate('/');
     } catch (error) {
       console.error(error);
       alert('Login failed. Please check your credentials.');
