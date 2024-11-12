@@ -1,4 +1,4 @@
-**MyEventExpert**
+# MyEventExpert
 
 A full-stack event management platform designed to simplify event planning and hosting. 
 
